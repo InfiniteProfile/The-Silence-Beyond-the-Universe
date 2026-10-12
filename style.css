@@ -1,0 +1,40 @@
+:root{--ink:#eef1f6;--mute:#a3acbb;--line:rgba(220,228,240,.16);--glass:rgba(10,11,16,.52);--sh:.45;--dp:.6;--acc:#cfd6e4;--pad:max(14px,env(safe-area-inset-left))}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#050507 url(poster.jpg) center 30%/cover fixed;color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+body.hc{--mute:#d4dae6;--line:rgba(240,244,250,.4)}
+#bg{position:fixed;inset:0;z-index:-1;pointer-events:none;background:#050507 url(poster.jpg) center 30%/cover}
+#vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+#shade{position:absolute;inset:0;background:#000;opacity:var(--sh)}
+#depth{position:absolute;inset:0;opacity:var(--dp);background:radial-gradient(120% 80% at 50% 0,transparent 30%,rgba(8,10,28,.75)),linear-gradient(to top,rgba(0,0,0,.85),transparent 55%)}
+.bar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px var(--pad);padding-top:max(10px,env(safe-area-inset-top));background:linear-gradient(#050507d9,#0500);flex-wrap:wrap}
+.brand{display:flex;gap:10px;align-items:center;color:var(--ink);text-decoration:none;font:600 .78rem/1.15 Georgia,"Iowan Old Style",serif;letter-spacing:.22em;text-transform:uppercase}
+nav{display:flex;gap:2px}nav a,nav button,.btn,button{font:inherit;color:var(--ink);background:none;border:1px solid transparent;padding:10px 12px;min-height:44px;border-radius:10px;text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s,transform .15s}
+nav a:hover,nav button:hover{background:#ffffff14}button:active{transform:scale(.97)}
+button.pri,.btn{background:rgba(230,236,248,.92);color:#07080c;border-color:transparent}button.ghost,.line{border-color:var(--line);background:#ffffff0a}
+:focus-visible{outline:2px solid #bcd2ff;outline-offset:2px}
+main{padding:0 var(--pad) 90px;max-width:1200px;margin:auto;outline:none}
+.hero{min-height:68vh;display:flex;flex-direction:column;justify-content:center;max-width:720px;animation:rise .9s both}
+h1{font:400 clamp(2rem,7.5vw,4.4rem)/1.05 Georgia,"Iowan Old Style",serif;letter-spacing:.01em;margin:.2em 0}
+.lede{color:var(--mute);max-width:46ch}
+.panel{background:var(--glass);border:1px solid var(--line);border-radius:18px;padding:16px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.rs{display:flex;gap:8px;margin:18px 0 8px;flex-wrap:wrap}.rs input{flex:1 1 220px;min-width:0}
+input[type=text],input[type=search],select,textarea{font:inherit;color:var(--ink);background:rgba(0,0,0,.45);border:1px solid var(--line);border-radius:10px;padding:12px;min-height:44px;transition:border-color .2s,box-shadow .3s}
+input:focus,select:focus{border-color:#cfe0ff;box-shadow:0 0 0 4px #9bb8ff22,0 0 28px #9bb8ff30;outline:none}
+.err{color:#ffb4b4;min-height:1.4em;margin:0}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.chip{padding:6px 12px;min-height:36px;border:1px solid var(--line);border-radius:99px;font-size:.85rem;background:#0006;font-variant-numeric:tabular-nums;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fine{color:var(--mute);font-size:.82rem}.note{padding:20px;color:var(--mute)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tools select{flex:1 1 140px}
+#vp{position:relative;margin-top:8px}.card{position:absolute;left:0;top:0;text-decoration:none;color:var(--ink);padding:12px;border-radius:16px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;border:1px solid var(--line);background:var(--glass);transition:border-color .25s,transform .25s;overflow:hidden}
+.card:hover{border-color:#e8eeffaa;transform:translateY(-2px)}.card b{font:400 1rem Georgia,serif}.card small{color:var(--mute);word-break:break-all;line-height:1.2;font-size:.72rem;max-height:2.4em;overflow:hidden}
+.card .id{font-variant-numeric:tabular-nums}
+.av{display:inline-block;line-height:0}.avb,.avi{clip-path:var(--clip);display:block}.avi{overflow:hidden;position:relative}.avi>*{width:100%;height:100%;display:block;object-fit:cover}
+.prof{display:grid;gap:22px;grid-template-columns:minmax(0,1fr);padding-top:18px;animation:reveal .55s cubic-bezier(.2,.8,.2,1) both}
+@media(min-width:800px){.prof{grid-template-columns:360px 1fr}}
+.prof h1{font-size:clamp(1.8rem,5vw,3rem)}.bigid{font:600 1.05rem ui-monospace,Menlo,Consolas,monospace;word-break:break-all;padding:12px;border-radius:12px;background:#0007;border:1px solid var(--line);user-select:all}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.rel{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}.rel a{flex:0 0 auto;text-decoration:none;color:var(--mute);font-size:.7rem;text-align:center;width:84px;overflow:hidden}
+dialog{border:1px solid var(--line);border-radius:20px;background:rgba(10,11,16,.94);color:var(--ink);width:min(560px,94vw);max-height:92dvh;padding:0;overflow:auto}dialog[open]{animation:reveal .3s both}dialog::backdrop{background:#000b}
+.dlg{padding:20px;display:grid;gap:12px}.dlg h2{margin:0;font:400 1.5rem Georgia,serif}.dlg label{display:grid;gap:4px;color:var(--mute);font-size:.9rem}.dlg label.row{display:flex}.acts{display:flex;gap:8px;flex-wrap:wrap}
+.prev{display:grid;place-items:center;padding:12px;background:radial-gradient(#2a2f4533,#0000)}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:#e8ecf2;color:#07080c;padding:10px 16px;border-radius:99px;opacity:0;transition:.25s;pointer-events:none;z-index:20;max-width:90vw}#toast.on{opacity:1;transform:translate(-50%,0)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}@keyframes reveal{from{opacity:0;transform:scale(.97);filter:brightness(2.2)}}
+body.calm *,body.calm *::before{animation:none!important;transition:none!important;backdrop-filter:none!important}body.calm .panel,body.calm .card{background:rgba(8,9,13,.82)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
