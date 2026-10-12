@@ -1,6 +1,6 @@
 # The Silence Beyond the Universe
 
-Dependency-free static site: `index.html`, `style.css`, `script.js`, `bg.mp4`, `poster.jpg`.
+Dependency-free static site. Upload ALL files together: `index.html`, `style.css`, `script.js`, `bg.mp4`, `bg.webm`, `poster.jpg`.
 
 ## Deploy on GitHub Pages
 1. Put all five files in the repo root (or `/docs`).

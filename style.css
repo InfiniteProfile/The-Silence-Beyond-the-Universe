@@ -38,3 +38,4 @@ dialog{border:1px solid var(--line);border-radius:20px;background:rgba(10,11,16,
 @keyframes rise{from{opacity:0;transform:translateY(18px)}}@keyframes reveal{from{opacity:0;transform:scale(.97);filter:brightness(2.2)}}
 body.calm *,body.calm *::before{animation:none!important;transition:none!important;backdrop-filter:none!important}body.calm .panel,body.calm .card{background:rgba(8,9,13,.82)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.card.st{position:static;height:auto;transform:none}.card.st:hover{transform:translateY(-2px)}h2{font:400 1.4rem Georgia,serif;margin:.6em 0}.hero{min-height:56vh}
